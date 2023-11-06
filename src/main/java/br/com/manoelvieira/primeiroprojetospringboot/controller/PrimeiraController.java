@@ -1,4 +1,4 @@
-package br.com.manoelvieira.primeiroprojetospringboot;
+package br.com.manoelvieira.primeiroprojetospringboot.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
