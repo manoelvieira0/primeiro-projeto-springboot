@@ -2,6 +2,7 @@ package br.com.manoelvieira.primeiroprojetospringboot.controller;
 
 import java.util.Map;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -43,6 +44,11 @@ public class PrimeiraController {
   @PostMapping("/metodocomlistheadersparams")
   public String metodoComListHeadersParams(@RequestHeader Map<String, String> headers){
     return "O Parâmetro com metodocombodyparams " + headers.entrySet();
+  }
+
+  @GetMapping("/metodoresponseentity")
+  public ResponseEntity<String> metodoResponseEntity(){
+    return ResponseEntity.status(400).body("Mensagem de erro");
   }
 
   record Usuario(String name){
